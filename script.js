@@ -23,16 +23,17 @@ function renderTodos() {
     });
 }
 
-//Function t0 add a new todo
+//Function to add a new todo
 function addTodo(event) {
     event.preventDefault(); // Prevent from submission
-    const newTodo = todoInput.ariaValueMax.trim();
+    const newTodo = todoInput.value.trim(); // Corrected this line
     if (newTodo) {
         todos.push(newTodo);
         todoInput.value = ''; // Clear the input
         renderTodos();
     }
 }
+
 
 // Functions to edit a todo
 function editTodo(index) {
